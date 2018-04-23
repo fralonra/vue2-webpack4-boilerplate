@@ -6,8 +6,7 @@ const config = require('config');
 module.exports = {
   output: {
     path: config.dirDes,
-    publicPath: 'public',
-    filename: 'main.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
