@@ -25,15 +25,6 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
-      },
-      {
         test: /\.less/,
         use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader']
       },
