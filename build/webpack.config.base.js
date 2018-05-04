@@ -6,8 +6,7 @@ const config = require('config');
 module.exports = {
   output: {
     path: config.dirDes,
-    publicPath: 'public',
-    filename: 'main.js'
+    filename: 'public/[name].js'
   },
   module: {
     rules: [
@@ -47,7 +46,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       title: config.title,
-      template: path.resolve(config.dirRoot, 'index.html'),
+      template: path.resolve(config.dirSrc, 'index.html'),
       filename: 'index.html',
       hash: true
     })
