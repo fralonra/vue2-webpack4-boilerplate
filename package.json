@@ -4,9 +4,11 @@
   "description": "A Vue2 and Webpack4 boilerplate.",
   "scripts": {
     "start": "npm run dev",
-    "build": "webpack --mode production ./app/index.js --config build/webpack.config.prod.js",
-    "dev": "webpack-dev-server --mode development ./app/index.js --config build/webpack.config.dev.js",
-    "watch": "webpack --mode production ./app/index.js --config build/webpack.config.prod.js --watch"
+    "build": "webpack --mode production ./app/index.js --config build/webpack.config.js",
+    "dev": "webpack-dev-server --mode development ./app/index.js --config build/webpack.config.js",
+    "watch": "webpack --mode production ./app/index.js --config build/webpack.config.js --watch",
+    "lint": "standard --fix",
+    "test": "npm run lint"
   },
   "dependencies": {
     "config": "^1.30.0"
@@ -24,7 +26,10 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
     "postcss-loader": "^2.1.4",
+    "standard": "^11.0.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "vue": "^2.5.16",
     "vue-loader": "^14.2.2",
